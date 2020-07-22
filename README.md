@@ -8,12 +8,17 @@ make setup
 * installs texlive
 * copy fonts into container
 
-## Build
+## Build all \*.tex Files
 ```
 make build
 ```
 * runs lualatex on every .tex file in the CV Folder
-* all outputs are in CV/outpu
+* all outputs are in CV/output
+
+### build only listed files
+```
+FILE="example.tex foo.tex bar.tex" make build
+```
 
 
 ## Credits

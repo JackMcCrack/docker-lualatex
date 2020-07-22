@@ -9,7 +9,7 @@ setup:
 
 build:
 	$(SUDO_CMD) $(DOCKER_CMD) run -v "`pwd`"/CV:/CV:Z -it $(CONTAINER_PARAMS) $(IMAGE_NAME):latest \
-		./buildscript.sh
+		./buildscript.sh $$FILE
 
 clean:
 	rm -rf CV/output/*
