@@ -9,7 +9,7 @@ setup:
 
 build:
 	$(SUDO_CMD) $(DOCKER_CMD) run -v "`pwd`"/CV:/CV:Z -it $(CONTAINER_PARAMS) $(IMAGE_NAME):latest \
-		for TEXFILE in `ls -1 *.tex`; do lualatex --interaction=batchmode --output-directory=output/ $TEXFILE; done
+		./buildscript.sh
 
 clean:
 	rm -rf CV/output/*
